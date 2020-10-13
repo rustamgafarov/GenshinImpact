@@ -1,0 +1,87 @@
+:root{
+    --dark-color: rgba(88, 241, 182, 0.507);
+    --medium-color: rgb(255, 255, 255);
+    --light-color: rgba(1, 10, 7, 0.226);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   }
+
+body {
+    font-family: 'Raleway', sans-serif;
+   font-size: 1rem;
+   line-height: 1.7;
+   color: var(--medium-color);
+   padding: 2rem;
+}
+
+.header {
+   height: 95vh;
+   background-image: linear-gradient(to bottom right,var(--light-color), var(--dark-color)), url('../img/xiao-genshin-impact-uhdpaper.com-4K-3.3038.jpg');
+   background-position: bottom;
+   background-size: cover; 
+   clip-path: polygon(88% 0, 100% 100%, 100% 60%, 100% 100%, 14% 100%, 0 0, 0 0);
+}
+
+.text-box {
+ position:absolute;
+ top: 75%;
+ left: 60%;
+ color: rgba(255, 255, 255, 0.945);
+ transform: translate(-50%,-50%);
+ border: 1,5px solid black;
+}
+
+
+.heading-primary-main {
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1,5rem;
+    animation-name: moveinright;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    text-transform: uppercase
+}
+
+@keyframes moveinright {
+    0% {
+        opacity: 0%;
+        transform: translateX(300px);
+    }
+
+    10%{
+    transform: translateX(250px)    
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 0.6rem;
+    animation-name: moveinleft;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-out
+}
+
+@keyframes moveinleft {
+    0%  {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    10% {
+        transform: translateX(-290px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
